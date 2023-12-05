@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { Category } = require('../models/category');
 
 class CategoryController {
@@ -28,9 +29,9 @@ class CategoryController {
 			}
 		});
 		console.log(category);
-		/*if (!category) {
+		if (!category) {
 			throw Error("Category not found!");
-		}*/
+		}
 		
 		category.name = categoryDto.name;
 		category.active = categoryDto.active;
@@ -55,4 +56,4 @@ class CategoryController {
 	}
 }
 
-module.exports = { CategoryController } 
+module.exports = { CategoryController };
